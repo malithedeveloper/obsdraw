@@ -11,7 +11,7 @@
 <p align="center">
   <a href="https://github.com/malithedeveloper/obsdraw/actions/workflows/ci.yml"><img alt="CI status" src="https://github.com/malithedeveloper/obsdraw/actions/workflows/ci.yml/badge.svg"></a>
   <a href="LICENSE"><img alt="License: AGPL-3.0" src="https://img.shields.io/badge/license-AGPL--3.0-blue.svg"></a>
-  <img alt="Node.js 22 or newer" src="https://img.shields.io/badge/node-%3E%3D22-339933?logo=node.js&logoColor=white">
+  <img alt="Node.js 22.19 or newer" src="https://img.shields.io/badge/node-%3E%3D22.19-339933?logo=node.js&logoColor=white">
 </p>
 
 OBSdraw gives editors a shared whiteboard while OBS receives a transparent, read-only browser source. It supports pens, text, images, video, animated filters, live cursors, chat, layers, undo/redo, and persistent board history.
@@ -28,7 +28,7 @@ OBSdraw gives editors a shared whiteboard while OBS receives a transparent, read
 
 ## Quick start
 
-Requirements: [Node.js 22 or newer](https://nodejs.org/) and npm 10 or newer.
+Requirements: [Node.js 22.19 or newer](https://nodejs.org/) and npm 10 or newer.
 
 ```bash
 git clone https://github.com/malithedeveloper/obsdraw.git

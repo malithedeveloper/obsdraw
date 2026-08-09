@@ -24,9 +24,17 @@ function parseEnvironment(source) {
   return values;
 }
 
-const majorVersion = Number.parseInt(process.versions.node.split(".")[0], 10);
-if (!Number.isFinite(majorVersion) || majorVersion < 22) {
-  console.error(`OBSdraw requires Node.js 22 or newer. Current version: ${process.version}`);
+const [majorVersion, minorVersion] = process.versions.node
+  .split(".")
+  .slice(0, 2)
+  .map((value) => Number.parseInt(value, 10));
+const hasSupportedNode = Number.isFinite(majorVersion)
+  && Number.isFinite(minorVersion)
+  && majorVersion >= 22
+  && majorVersion < 27
+  && (majorVersion !== 22 || minorVersion >= 19);
+if (!hasSupportedNode) {
+  console.error(`OBSdraw requires Node.js 22.19 through 26. Current version: ${process.version}`);
   process.exit(1);
 }
 
