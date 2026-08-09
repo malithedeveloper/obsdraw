@@ -1,0 +1,18 @@
+services:
+  obsdraw:
+    build: .
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env.local
+    environment:
+      NODE_ENV: production
+      HOST: 0.0.0.0
+      PORT: 3000
+      LOCAL_STORE_DIR: /app/server-data
+    volumes:
+      - obsdraw-data:/app/server-data
+    restart: unless-stopped
+
+volumes:
+  obsdraw-data:

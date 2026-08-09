@@ -1,0 +1,56 @@
+{
+  "name": "obsdraw",
+  "version": "1.0.0",
+  "description": "A secure, real-time collaborative drawing overlay for OBS Studio.",
+  "private": true,
+  "license": "AGPL-3.0-only",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malithedeveloper/obsdraw.git"
+  },
+  "homepage": "https://github.com/malithedeveloper/obsdraw#readme",
+  "bugs": {
+    "url": "https://github.com/malithedeveloper/obsdraw/issues"
+  },
+  "scripts": {
+    "setup": "node scripts/setup.mjs",
+    "dev": "node server.mjs",
+    "build": "next build",
+    "start": "node server.mjs",
+    "lint": "eslint --max-warnings=0 .",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.*",
+    "check": "npm run lint && npm run typecheck && npm test && npm run build",
+    "audit": "npm audit --audit-level=high"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.1106.0",
+    "@braintree/sanitize-url": "^7.1.2",
+    "@next/env": "16.3.0",
+    "next": "16.3.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "sharp": "^0.35.3",
+    "socket.io": "^4.8.3",
+    "socket.io-client": "^4.8.3",
+    "undici": "^7.29.0",
+    "webdav": "^5.10.0",
+    "webfontloader": "^1.6.28"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^22.19.11",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@types/webfontloader": "^1.6.38",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "16.3.0",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.23.11",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=22 <27",
+    "npm": ">=10"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "OBSdraw",
+  "description": "A secure, collaborative drawing overlay for OBS Studio.",
+  "repository": "https://github.com/malithedeveloper/obsdraw",
+  "logo": "https://raw.githubusercontent.com/malithedeveloper/obsdraw/main/public/obsdraw-logo.webp",
+  "keywords": ["obs", "whiteboard", "drawing", "socket.io", "next.js"],
+  "env": {
+    "ACCESS_KEY": {
+      "description": "Secret key used by editors to sign in.",
+      "generator": "secret"
+    },
+    "VIEW_KEY": {
+      "description": "Read-only key embedded in the OBS browser-source URL.",
+      "generator": "secret"
+    },
+    "AUTH_SECRET": {
+      "description": "Signs editor sessions. Keep this value private.",
+      "generator": "secret"
+    },
+    "SOCKET_AUTH_SECRET": {
+      "description": "Signs short-lived Socket.IO credentials. Keep this value private.",
+      "generator": "secret"
+    },
+    "TRUST_PROXY": {
+      "description": "Trust Heroku's proxy headers for rate limiting and secure request handling.",
+      "value": "1"
+    },
+    "NODE_ENV": {
+      "value": "production"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
