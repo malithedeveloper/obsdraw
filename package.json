@@ -33,7 +33,7 @@
     "sharp": "^0.35.4",
     "socket.io": "^4.8.3",
     "socket.io-client": "^4.8.3",
-    "undici": "^8.10.0",
+    "undici": "^8.10.2",
     "webdav": "^5.10.0",
     "webfontloader": "^1.6.28"
   },
