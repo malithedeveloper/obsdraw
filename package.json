@@ -27,7 +27,7 @@
     "@aws-sdk/client-s3": "^3.1119.0",
     "@braintree/sanitize-url": "^7.1.2",
     "@next/env": "16.3.3",
-    "next": "16.3.3",
+    "next": "16.3.6",
     "react": "19.2.8",
     "react-dom": "19.2.8",
     "sharp": "^0.35.4",
